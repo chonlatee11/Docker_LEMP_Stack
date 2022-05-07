@@ -5,7 +5,7 @@ LEMP เป็นกลุ่มของ Open Source Software สำหรั�
 - E = (E)Nginx Web Server
 - M = MariaDB
 - P = PHP
---
+
 # Part 1 config and command for Apache
 
 1. docker run --name webserver1 -p 80:80 httpd:2.4.41-alpine
@@ -19,7 +19,7 @@ LEMP เป็นกลุ่มของ Open Source Software สำหรั�
     + รัน Container ด้วย docker-compose | สามารถดู Container ที่กำลังรันทั้งหมดที่ docker-compose.yml ดูแลได้ ใช้คำสั่ง docker-compose ps |
 *หากต้องการ stop/delete เข้าไปที่ docker exec -it httpd /bin/bash และใช้คำสั่ง docker-compose down --rmi all*
 
---
+
 # Part 2 config and command for Nginx
 
 * สร้าง folder เพื่อเก็บไฟล์ html และ ไฟล์ docker-compose
@@ -27,7 +27,7 @@ LEMP เป็นกลุ่มของ Open Source Software สำหรั�
     + แก้ไขไฟล์ docker-compose | ใช้ port 81 เพราะ 80 ใช้ไปกับ Apache แล้ว |
     + รัน container ด้วย docker-compose | docker-compose up -d |
 *หากต้องการ stop/delete ใช้คำสั่ง docker-compose down --rmi all*
---
+
 # Part 3 Config Nginx และ php FPM Container
 
 * สร้าง folder เพื่อเก็บไฟล์ docker-compose , html , Nginx
