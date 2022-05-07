@@ -39,7 +39,7 @@ LEMP เป็นกลุ่มของ Open Source Software สำหรั�
   * สร้าง folder สำหรับเก็บไฟล์ sql 
   * แก้ไขไฟล์ docker-compose.yml **นำไฟล์ "titanic.sql" มา Import ลงใน Mariadb โดยเมื่อรัน Container แล้ว Mariadb จะ Import ไฟล์ ".sql" ใน Folder /docker-entrypoint-initdb.d ให้อัตโนมัติถ้ามันพบว่าภายใน /var/lib/mysql/ ของ lemp_mariadb Container ยังไม่มีข้อมูล**
   * สร้าง Dockerfile โดยติดตั้ง mysqli เพื่อเรียก Mariadb จาก php 
-    * FROM php:7.4-fpm-alpine
+    * FROM php:7.4-fpm-alpine\
       RUN docker-php-ext-install mysqli
   * แก้ไขไฟล์ index.php
   * สร้าง php Image ด้วยคำสั่ง *docker-compose build* 
