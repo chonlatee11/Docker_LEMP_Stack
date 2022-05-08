@@ -40,6 +40,6 @@ services:
 
 networks:
   default:
-    external:
-      name:
-        web_network
+    name: web_network
+    external: true
+        
